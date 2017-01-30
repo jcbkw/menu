@@ -1,19 +1,19 @@
 function hideMenu(menu) {
 
-    menu.style.display = "none";
+    menu.className = "unrender";
 
 }
 
 
 function showMenu(menu) {
     
-    menu.style.display = "block";
+    menu.className = "";
 
 }
 
 function toggleMenu(menu) {
 
-    if (menu.style.display === "none" ) {
+    if (menu.className === "unrender") {
 
         showMenu(menu);
     }
@@ -22,3 +22,16 @@ function toggleMenu(menu) {
          hideMenu(menu);
     }
 }
+
+function bindEvent() {
+
+    document.getElementById("mybutton").addEventListener("click", function(){
+                    
+        toggleMenu(document.getElementById('mymenu'));
+
+    }, false);
+    
+}
+
+//window.addEventListener("load", bindEvent);
+document.addEventListener("DOMContentLoaded", bindEvent, false);
