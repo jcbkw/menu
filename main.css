@@ -66,7 +66,8 @@ aside a {
     display: block;
 }
 
-aside a:hover {
+aside a:hover, 
+.selected {
     background-color:#3c3c80;
 }
 
@@ -77,8 +78,15 @@ aside a:hover {
     top: 0;
     left: 250px;
     background-color: #3c3c80;
-    
+    display:none;
 }
+
+.selected + .menu2{
+
+    display: block;
+
+}
+
 
 .menu2 ul {
     color: #ffffff; 
