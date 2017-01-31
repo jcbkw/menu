@@ -11,6 +11,14 @@ main {
     height: 100%;
 }
 
+ul{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 aside {
     width: 250px;
     height: 100%;
@@ -18,44 +26,74 @@ aside {
     top: 0;
     left: 0;
     background-color: #5e5ec3;
-    z-index: 1;
-    vertical-align: middle;
+    z-index: 3;
 }
 
-aside a {
-    text-decoration: none;
-    color:inherit;
-}
 
 aside h1 {
     padding-left: 10px;
     font-style: italic;
 }
 
+
+
 aside ul {
-    list-style: none;
     color: #ffffff; 
-    margin-top: 31px;
+    margin-top: 80px;
     padding-left: 0px;
     font-size: 25px;    
 }
 
 aside li {
      border-bottom: 1px solid #3c3c80;
-     padding: 15px 10px;
 }
 
-aside li::before {
 
+aside a::before {
     content: url("images/play.png");
     padding: 0px 10px;
-
+    display: inline;
 }
 
 aside li:first-child {
-    
     border-top: 1px solid #3c3c80;
+}
 
+aside a {
+    text-decoration: none;
+    color:inherit;
+    padding: 15px 10px;
+    display: block;
+}
+
+aside a:hover {
+    background-color:#3c3c80;
+}
+
+.menu2 {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 250px;
+    background-color: #3c3c80;
+    
+}
+
+.menu2 ul {
+    color: #ffffff; 
+    margin-top: 128px;
+    padding:0;
+    font-size: 25px; 
+}
+
+.menu2 li {
+     border-bottom: 1px solid #2c2c50;
+}
+
+.menu2 a {
+    padding-right: 25px;
+    color: white;
 }
 
 header {
@@ -83,7 +121,5 @@ button:hover, button:active {
 }
 
 .unrender {
-
     display: none;
-
 }
