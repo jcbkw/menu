@@ -104,6 +104,15 @@ aside a:hover,
     color: white;
 }
 
+.menu2 a::before {
+    content: url('images/target.png');
+    padding: 0px 10px;
+}
+
+.menu2 a:hover {
+    background-color: #2c2c50;
+}
+
 header {
      text-align: center;
 }
