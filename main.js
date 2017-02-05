@@ -1,50 +1,47 @@
-function hideMenu(menu) {
-
-    menu.className = "unrender";
-
-}
-
-function showMenu(menu) {
-    
-    menu.className = "";
-
-}
-
 function toggleMenu(menu) {
 
-    if (menu.className === "unrender") {
+    if (menu.classList.contains("unrender")) {
 
-        showMenu(menu);
+        menu.classList.remove("unrender");
+        
     }
     else {
-        
-         hideMenu(menu);
+
+        menu.classList.add("unrender");
+    
     }
+
 }
 
-function bindEvent() {
-
-     document.getElementById("mytask").addEventListener("click", function(){
-         
-        if (this.classList.contains("selected")) {
-
-            this.classList.remove("selected");
-            
-        }
-        else {
-
-            this.classList.add("selected");
-        }   
-    
-    }, false);
-
-    document.getElementById("mybutton").addEventListener("click", function(){
+function mainMenuButtonClickHandler(event) {
                     
-        toggleMenu(document.getElementById('mymenu'));
+    toggleMenu(document.getElementById('left-pane'));
+
+}
+
+function subMenuItemsClickHandler(event){
+    
+    event.preventDefault();
+
+    if (this.classList.contains("selected")) {
+
+        this.classList.remove("selected");
         
-    }, false);
+    }
+    else {
+
+        this.classList.add("selected");
+    } 
+
+}
+
+function bindEvents() {
+
+    document.getElementById("mytask").addEventListener("click", subMenuItemsClickHandler, false);
+
+    document.getElementById("mybutton").addEventListener("click", mainMenuButtonClickHandler, false);
     
 }
 
 //window.addEventListener("load", bindEvent);
-document.addEventListener("DOMContentLoaded", bindEvent, false);
+document.addEventListener("DOMContentLoaded", bindEvents, false);
