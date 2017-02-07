@@ -1,0 +1,13 @@
+@media screen and (max-width: 599px) {
+
+    #left-pane.menu-wrapper {
+        width: 100%;
+        display: block;
+    }
+    
+    header {
+        background-color: yellow;
+    }
+
+
+}
