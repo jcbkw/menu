@@ -1,0 +1,33 @@
+.sub-menu
+- left: 0px;
+- opacity: 1;
+- background-color: #3c3c80;
+- transition: .25s ease-out;
+
+.sub-menu ul {
+    /* margin-top: 128px; */
+
+.main-menu
+/* left: 0 */
+- background-color: #535ec3;
+
+.main-menu ul {
+    /* margin-top: 80px; */
+
+#left-pane .menu-wrapper {
+width: 100%;
+display:block;
+}
+
+.menu-wrapper
+height: auto;
+/* position: fixed */
+ /* top */ 
+
+h1 
+
+margin-top:0;
+padding: 15px 10px;
+
+.main-menu ul {
+ /* margin-top: 80px; */
