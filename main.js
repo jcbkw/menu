@@ -17,20 +17,19 @@ function toggleMenu(menu, button) {
 
 }
 
-function mainMenuButtonClickHandler(event) {
+function menuTriggerButtonClickHandler(event) {
                     
     toggleMenu(document.getElementById('left-pane'), event.target);
 
 }
 
-function subMenuItemsClickHandler(event){
+function mainMenuItemsClickHandler(event){
     
     event.preventDefault();
 
     if (this.classList.contains("selected")) {
 
         this.classList.remove("selected");
-        
     }
     else {
 
@@ -39,11 +38,21 @@ function subMenuItemsClickHandler(event){
 
 }
 
+function subMenuItemsClickHandler(event) {
+
+    if (event.target.nodeName === "A" ) {
+
+        toggleMenu(document.getElementById('left-pane'), document.getElementById("mybutton"));
+
+    }
+
+}
+
 function bindEvents() {
 
-    document.getElementById("mytask").addEventListener("click", subMenuItemsClickHandler, false);
-
-    document.getElementById("mybutton").addEventListener("click", mainMenuButtonClickHandler, false);
+    document.getElementById("mytask").addEventListener("click", mainMenuItemsClickHandler, false);
+    document.getElementById("mybutton").addEventListener("click", menuTriggerButtonClickHandler, false);
+    document.getElementsByClassName("sub-menu")[0].addEventListener("click", subMenuItemsClickHandler, false);
 
 }
 

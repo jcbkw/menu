@@ -1,7 +1,8 @@
 @media only screen and (max-width: 599px){
 
     #left-pane.menu-wrapper {
-        top: 51px;
+        top: 50px;
+        width:100%;
     }
     .main-menu .selected + .sub-menu.menu-wrapper {
         width: 100%;
