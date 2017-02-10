@@ -1,7 +1,7 @@
 #mybutton.menu-button {
 
     min-width: 50px;
-
+    position: relative;
 }
 
 /*.button-on {
