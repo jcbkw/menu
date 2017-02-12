@@ -38,10 +38,27 @@
     display: block;
 }
 
-.main-menu a::before {
-    content: url("images/play.png");
-    padding: 0px 10px;
-    display: inline;
+.main-menu a::before{
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+}
+.main-menu > ul > li:first-child > a::before {
+    background-image: url('../images/play.png');
+}
+
+.main-menu > ul > li:nth-child(2) > a::before {
+    background-image: url('../images/write.gif');
+}
+.main-menu > ul > li:nth-child(3) > a::before{
+    background-image: url('../images/book.gif');
+}
+
+.main-menu > ul > li:last-child > a::before {
+    background-image: url('../images/list.gif');
 }
 
 .main-menu a:hover, 
@@ -76,8 +93,8 @@
      border-bottom-color: #2c2c50;
 }
 
-.sub-menu a::before {
-    content: url('images/target.png');
+.main-menu .sub-menu a::before {
+    background-image: url('../images/target.png');
 }
 
 .sub-menu a:hover {
