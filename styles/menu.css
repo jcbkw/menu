@@ -47,18 +47,20 @@
     background-repeat: no-repeat;
 }
 .main-menu > ul > li:first-child > a::before {
-    background-image: url('../images/play.png');
+    background-image: url('../images/sprite.png');
+    background-position: 0 0; 
 }
 
 .main-menu > ul > li:nth-child(2) > a::before {
-    background-image: url('../images/write.gif');
+    background-image: url('../images/sprite.png');
+    background-position: -16px;
 }
 .main-menu > ul > li:nth-child(3) > a::before{
-    background-image: url('../images/book.gif');
+    background-image: url('../images/sprite.png');
 }
 
 .main-menu > ul > li:last-child > a::before {
-    background-image: url('../images/list.gif');
+    background-image: url('../images/sprite.png');
 }
 
 .main-menu a:hover, 
@@ -94,7 +96,7 @@
 }
 
 .main-menu .sub-menu a::before {
-    background-image: url('../images/target.png');
+    background-image: url('../images/sprite.png');
 }
 
 .sub-menu a:hover {
