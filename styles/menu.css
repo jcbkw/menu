@@ -38,7 +38,7 @@
     display: block;
 }
 
-.main-menu a::before{
+.main-menu > ul > li > a::before{
     width: 16px;
     height: 16px;
     margin-right: 5px;
@@ -94,9 +94,21 @@
 .sub-menu li {
      border-bottom-color: #2c2c50;
 }
+.sub-menu li .fa {
+    margin-right: 10px;
+    font-size: 16px;
+    vertical-align: middle;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    text-align: center;
+}
 
 .main-menu .sub-menu a::before {
-    background-position: -64px 0;
+    margin: 5px;
+    background-image: none;
+    width: 0;
+    height: 0;
 }
 
 .sub-menu a:hover {
