@@ -1,3 +1,28 @@
+function hideLoadingScreen () {
+   
+   document.getElementById("overlay1").classList.add("unrender");
+  
+}
+
+function showLoadingScreen () {
+   
+   document.getElementById("overlay1").classList.remove("unrender");
+  
+}
+
+function leftPaneATagClickEventHandler (event) {
+    var eTarget = event.target;    
+    
+    if (eTarget.nodeName === "A") {
+
+        if (eTarget.getAttribute('target') === "portal") {
+
+             showLoadingScreen();
+        
+        }
+    }     
+}
+
 function toggleMenu (menu, button) {
 
     if (menu.classList.contains("unrender")) {
@@ -22,7 +47,7 @@ function toggleMenu (menu, button) {
 function toggleLeftPaneMenu () {
 
     toggleMenu(document.getElementById('left-pane'), document.getElementById("mybutton"));
-
+    
 }
 
 function menuTriggerButtonClickHandler (event) {
@@ -83,7 +108,9 @@ function bindEvents () {
     document.getElementById("mytask").addEventListener("click", mainMenuItemsClickHandler, false);
     document.getElementById("mybutton").addEventListener("click", menuTriggerButtonClickHandler, false);
     document.getElementsByClassName("sub-menu")[0].addEventListener("click", subMenuItemsClickHandler, false);
-
+    document.getElementById("left-pane").addEventListener("click", leftPaneATagClickEventHandler, false);
+    document.getElementById('portal').addEventListener("load", hideLoadingScreen, false);
+    
 }
 
 //window.addEventListener("load", bindEvent);

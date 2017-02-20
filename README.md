@@ -8,6 +8,8 @@ Creating a menu list for my website
 ## doing
 
 6. Use custom font
+ - Lato text throughout the site.
+ - Font awesome for the icons.
 
 --------------------------------------------------------
 ## done

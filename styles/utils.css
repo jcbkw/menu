@@ -1,3 +1,22 @@
 .unrender {
     display: none;
 }
+
+.overlay-screen {
+    background-color: rgba(100, 100, 100, 0.3);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+.overlay-screen .loading-image {
+    background-image: url(../images/loading.gif);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    position: relative;
+    top: 50%;
+}
