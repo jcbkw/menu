@@ -1,3 +1,34 @@
+function hideLoadingScreen (){
+   
+   document.getElementById("overlay1").classList.add("unrender");
+  
+}
+
+function showLoadingScreen (){
+   
+   document.getElementById("overlay1").classList.remove("unrender");
+  
+}
+
+function aTagClickEventListener (target, eventFunctionName) {
+
+ var 
+ aTags = target.getElementsByTagName("a"), 
+ i;
+
+    if (aTags) {
+
+        for(i = 0; i < aTags.length; i++) {
+            //"http" and "https" protocal urls for achors that will reload the window screen.
+            if (aTags[i].href.indexOf('http') > -1 || aTags[i].href.indexOf('https') > -1) { 
+
+                aTags[i].addEventListener("click", eventFunctionName, false);
+
+            } 
+        }
+    }
+ }
+
 function toggleMenu (menu, button) {
 
     if (menu.classList.contains("unrender")) {
@@ -21,8 +52,11 @@ function toggleMenu (menu, button) {
 
 function toggleLeftPaneMenu () {
 
-    toggleMenu(document.getElementById('left-pane'), document.getElementById("mybutton"));
+    var leftPane = document.getElementById('left-pane');
 
+    toggleMenu(leftPane, document.getElementById("mybutton"));
+    aTagClickEventListener (leftPane, showLoadingScreen);
+    
 }
 
 function menuTriggerButtonClickHandler (event) {
@@ -83,7 +117,8 @@ function bindEvents () {
     document.getElementById("mytask").addEventListener("click", mainMenuItemsClickHandler, false);
     document.getElementById("mybutton").addEventListener("click", menuTriggerButtonClickHandler, false);
     document.getElementsByClassName("sub-menu")[0].addEventListener("click", subMenuItemsClickHandler, false);
-
+    document.getElementById('portal').addEventListener("load", hideLoadingScreen, false);
+    hideLoadingScreen();
 }
 
 //window.addEventListener("load", bindEvent);
